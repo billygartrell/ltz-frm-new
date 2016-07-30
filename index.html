@@ -105,7 +105,7 @@
 
           </div>
         </div>
-        <div class="wrapper">
+        <div class="wrapper" id="desktop-descriptions">
 
         <div id="vendor1-description" class="vendor-description">
           <h2 class="cushycms">Aunt Mary</h2>
@@ -265,36 +265,116 @@ Sugar Whipped Bakery works under the belief that all foods should taste good wit
       </footer>
 
       <script type="text/javascript">
+        // Use a query selector to grab an array of elements whose ID's END with description
+        description_group = $('[id$=description]');
+
+        /*
+        Name: mobileDescriptions
+        Description: Moves all of the description elements after their associated <li> elements
+        Parameters: description_group is an array of <div> elements that are used for displaying
+        extra information about a vendor when their name is clicked
+        */
+        function mobileDescriptions(description_group) {
+          for (var i = 0; i < description_group.length; i++) {
+            var description_div = $(description_group[i]);
+            var vendor = $(description_div).prop('id').split('-')[0];
+            $(description_div).detach().insertAfter('#' + vendor);
+          }
+        }
+
+        /*
+        Name: desktopDescriptions
+        Description: Moves all of the description elements under the desktop-descriptions <div>
+        Parameters: description_group is an array of <div> elements that are used for displaying
+        extra information about a vendor when their name is clicked
+        */
+        function desktopDescriptions(description_group) {
+          for (var i = 0; i < description_group.length; i++) {
+            var description_div = $(description_group[i]);
+            var vendor = $(description_div).prop('id').split('-')[0];
+            $(description_div).detach().appendTo('#desktop-descriptions');
+          }
+        }
+
+        // This places the description elements in their proper location on page load,
+        // depending on screen width
+        if ($(window).width() < 641) {
+          mobileDescriptions(description_group);
+        }
+        else {
+          desktopDescriptions(description_group);
+        }
+
+        // This places a resize event on the window to listen for changes in screen width
+        // for moving the elements after the page has already loaded
+        $(window).resize(function() {
+          if ($(window).width() < 641) {
+            mobileDescriptions(description_group);
+          }
+          else {
+            desktopDescriptions(description_group);
+          }
+        });
+
         jQuery(function($){
-         $('[id^=vendor]').not('[id*=description]').click(function(){
+          // Use a query selector to grab an array of elements whose ID property
+          // BEGIN with vendor but do not CONTAIN description
+          // This will grab the vendor# <li> elements and attach a click event
+          // to each one that slide toggles the associated description div
+          $('[id^=vendor]').not('[id*=description]').click(function(){
+            // Grab the same group described earlier
+            var vendorlist = $('[id^=vendor]').not('[id*=description]');
 
-           var vendorlist = $('[id^=vendor]').not('[id*=description]');
+            // Loop over each <li> element in the list
+            for (var i = 0; i < vendorlist.length; i++) {
+              // Grab the vendor# string from the ID property of the <li> element
+              var vendor = $(vendorlist[i]).prop('id');
 
-           for (var i = 0; i < vendorlist.length; i++) {
-             var vendor = $(vendorlist[i]).prop('id');
-             if ($(vendorlist[i]).hasClass('active')) {
-               $(vendorlist[i]).removeClass('active');
-               $('#' + vendor + '-description').removeClass('active');
-               $('#' + vendor + '-description').slideToggle();
+              // Determine if the description div for the vendor is already open by
+              // checking the 'active' class
+              if ($(vendorlist[i]).hasClass('active')) {
+                // If the description is active, we are hiding the description div
+                // So remove the active class from both the <li> and <div> elements
+                $(vendorlist[i]).removeClass('active');
+                $('#' + vendor + '-description').removeClass('active');
 
-               if (vendorlist[i] == this) {
-                 return;
-               }
-             }
-           }
+                // Toggle the description div
+                $('#' + vendor + '-description').slideToggle();
 
-           var vendor = $(this).prop('id');
-           if (!$(this).hasClass('active')) {
-             $(this).addClass('active');
-             $('#' + vendor + '-description').addClass('active');
-           } else {
-             $(this).removeClass('active');
-             $('#' + vendor + '-description').removeClass('active');
-           }
-           $('#' + vendor + '-description').slideToggle();
+                // If we hit the vendor <li> that was clicked, return from here.
+                        // We don't want it to slide back open (which will happen now,
+                        // because we've removed the 'active' class)
+                if (vendorlist[i] == this) {
+                  return;
+                }
+              }
+            }
 
-         })
-       })
+            // If we got this far, we will want to open another description,
+            // i.e., the user had a description open for one vendor but clicked
+            // another vendor before closing that one. This causes the first one to
+            // slideToggle closed before the new vendor's description is slideToggle
+            // opened
+
+            // Grab the vendor from this <li> element's ID property
+            var vendor = $(this).prop('id');
+
+            // If this <li> element does not have the 'active' class, 
+            // add it to both the <li> and description div
+            if (!$(this).hasClass('active')) {
+              $(this).addClass('active');
+              $('#' + vendor + '-description').addClass('active');
+            } else {
+              // Otherwise, remove it from both the <li> and description div
+              $(this).removeClass('active');
+              $('#' + vendor + '-description').removeClass('active');
+            }
+
+            // Finally, toggle the description div
+            $('#' + vendor + '-description').slideToggle();
+
+          })
+        })
       </script>
 
     <script type="text/javascript">
