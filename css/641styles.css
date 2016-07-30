@@ -165,6 +165,13 @@ footer img{
   overflow:hidden;
 }
 
+.hero-img-sub{
+  display:block;
+}
+
+.sub-hero2{
+  display:block;
+}
 
 #sub-content-1 li{
   margin-top:10px;

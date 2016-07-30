@@ -330,6 +330,14 @@ text-align:center;
   display:none;
 }
 
+.hero-img-sub{
+  display:none;
+}
+
+.sub-hero2{
+  display:none;
+}
+
 #in-season{
   border-bottom:1px solid black;
   margin-bottom:30px;
