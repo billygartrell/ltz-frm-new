@@ -1,0 +1,73 @@
+/* Global styles */
+
+/* Font Styles */
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+
+body, img, li, ul, h1, h2, h3, h4, p{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'Lato', sans-serif;
+  background-image: url(../img/light_blue.png);
+}
+
+a{
+  transition: color 0.2vs ease;
+  text-decoration:none;
+  color:#cc3433;
+}
+
+a:hover{
+  color:#f97a79;
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  text-align: center;
+}
+
+.animate{
+	transition: all 0.1s;
+  	-webkit-transition: all 0.1s;
+    -moz-transform: translate(0px,5px);
+    -o-transform: translate(0px,5px);
+    -ms-transform: translate(0px,5px);
+}
+
+.vendor-section li{
+  color:#cc3433;
+}
+
+.vendor-section li:hover{
+  color:blue;
+  cursor:pointer;
+  color:#f97a79;
+
+}
+
+.wrapper{
+  background-color:white;
+}
+.map-overlay {
+   background:transparent;
+   position:relative;
+   /*width:640px;*/
+   height:480px; /* your iframe height */
+   top:480px;  /* your iframe height */
+   margin-top:-480px;  /* your iframe height */
+}
+
+#lititz-content{
+  background-color:white;
+}
+
+#lititz-content-description{
+  width:auto;
+  text-align:left;
+  background-color:white;
+}

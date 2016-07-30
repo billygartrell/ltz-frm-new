@@ -1,0 +1,339 @@
+@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */
+  /* Begin styles */
+
+  h1, h2, h3, h4, h5{
+    font-family:'Roboto Slab',serif;
+  }
+
+  li{
+    list-style-type:none;
+  }
+
+/* Header/Navigation Styles */
+
+/* Mobile nav styles */
+
+.desktop-nav{
+  visibility: hidden;
+  display: none;
+}
+
+/* Hamburger Menu */
+.menu-btn{
+  position:absolute;
+  top:30px;
+  left:30px;
+}
+
+.menu-btn div {
+  padding-right:auto;
+  line-height: 1.2;
+  font-size:18px;
+  font-weight:200;
+  vertical-align:middle;
+  z-index:99;
+}
+
+.menu-btn span{
+  display:block;
+  width:22px;
+  height:2px;
+  margin:4px 0;
+  background: rgb(0,0,0);
+  z-index:99;
+}
+/* End Hamburger Menu */
+
+.responsive-menu {
+  display:none;
+}
+
+.responsive-menu ul{
+  text-align: left;
+  padding-left:140px;
+  margin-bottom:30px;
+}
+
+.responsive-menu li{
+  margin-top:20px;
+  font-size: 14pt;
+}
+
+.expand{
+  display:block !important;
+}
+
+/* End Mobile Nav styles */
+
+  .logo-mobile-center, .mobile-center{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    text-align: center;
+  }
+
+  header{
+    background-color:white;
+    width:100%;
+    border-bottom:4.5px solid #18b0bc;
+  }
+
+  #logo {
+    width:250px;
+    height:auto;
+    padding-top:10px;
+    padding-bottom:10px
+  }
+
+/* Hero styles */
+
+  .hero-area div{
+    margin-bottom:-3px;
+    padding:0px;
+  }
+
+  .hero-img-main, .hero-img-sub{
+    width:100%;
+  }
+
+  .hero-img-main{
+    border-right:2px solid white;
+  }
+
+  .sub-hero2{
+    border-top:2px solid white;
+    overflow:hidden;
+    margin-top:-2px;
+  }
+
+  .content-area, .main-content-area{
+    padding-left:25px;
+    padding-right:25px;
+    margin-bottom:25px;
+    margin-top:25px;
+  }
+
+  .button{
+  	margin-top:30px;
+    margin-left:20px;
+  	padding:10px;
+  	border-radius: 10px;
+  	font-size: 25px;
+  	color: #FFF;
+  	text-decoration: none;
+  	background-color: #cc3727;
+  	border-bottom: 5px solid #982323;
+    width:85%;
+    float:left;
+    text-align:center;
+  	/*text-shadow: 0px -2px #2980B9;*/
+  }
+
+  .button:active{
+  	transform: translate(0px,5px);
+    	-webkit-transform: translate(0px,5px);
+      -moz-transform: translate(0px,5px);
+      -o-transform: translate(0px,5px);
+      -ms-transform: translate(0px,5px);
+  	border-bottom: 1px solid;
+  }
+
+  .button:hover{
+    background-color:#ce4443;
+    color:white;
+  }
+
+#fresh-content{
+  background-color:white;
+  padding:30px;
+}
+
+#fresh-side-sections{
+  padding:30px;
+  background-color:white;
+}
+
+  /* Footer Styles */
+  footer{
+    font-size:14pt;
+    padding-top:40px;
+    width:100%;
+    background-color:white;
+    margin-bottom:-20px;
+  }
+
+  footer li{
+    margin-top:20px;
+  }
+
+  footer img{
+    color:black;
+    width:60px;
+  }
+
+  .section{
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+
+  .section h3{
+    text-align:center;
+  }
+
+  .copyright{
+    margin-top:50px;
+    font-size:10pt;
+    color:#818181;
+    display:block;
+    float:none;
+    clear:left;
+  }
+
+  .category-icon{
+    width:100px;
+    margin:25px;
+  }
+  /* Vendor Homepage Styles */
+
+  .vendor-container{
+    padding-top:30px;
+    padding-right:20px;
+    padding-left:20px;
+    padding-bottom:40px;
+    background-color:white;
+  }
+
+  .vendor-container h1, p{
+    text-align:left;
+  }
+
+  .vendor-section{
+    text-align:left;
+  }
+
+  .vendor-section h1{
+    font-size:16pt;
+    border-bottom:1px solid black;
+  }
+
+  .vendor-section li{
+    font-size:16pt;
+    margin-top:5px;
+  }
+
+  .vendor-description{
+    background-color:#65c7a8;
+    padding:30px;
+    text-align:center;
+    display:none;
+
+  }
+
+  .mobile-margin-top {
+    margin-top:30px;
+  }
+
+  .dark-green{
+    background-image: url(../img/darker_greeen.png);
+    background-color:#3EA584;
+  }
+
+  #location{
+    display:inline-block;
+    width:100%;
+
+  }
+
+  #location p{
+    text-align:left;
+    color:white;
+  }
+
+  #location h2{
+    color:white;
+    font-size:20pt;
+    margin-bottom:5px;
+  }
+
+  #location .section{
+    float:left;
+    display:block;
+    width:100%;
+    /*border:1px solid red;*/
+  }
+
+
+  #location .map{
+    width:100%;
+    float:left;
+    display:block;
+    margin-top:30px;
+    height:270px;
+  }
+
+#visit{
+  margin-top:30px;
+  text-align:center;
+}
+
+#visit p{
+text-align:center;
+}
+
+#lititz-content-description{
+  width:auto;
+  text-align:left;
+  background-color:white;
+  padding:20px;
+}
+
+#lititz-sub-content{
+  display:inline-block;
+  width:100%;
+  background-color: #ffe8f8;
+  text-align:center;
+}
+
+#sub-content-1{
+  padding-top:20px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+#sub-content-1 .button{
+  margin-bottom:30px;
+}
+
+#sub-content-1 li{
+  margin-top:10px;
+}
+
+#sub-content-2{
+  padding:0;
+  margin:0;
+}
+
+#sub-content-2 img{
+  width:100%;
+  margin:0px;
+}
+
+#market-sub-content-1{
+
+  width:80%;
+  padding:30px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#market-hero{
+  display:none;
+}
+
+#in-season{
+  border-bottom:1px solid black;
+  margin-bottom:30px;
+  padding-bottom:30px;
+}
+
+}

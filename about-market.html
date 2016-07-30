@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Lititz Farmer's Market</title>
+    <!-- CSS Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/320styles.css" rel="stylesheet">
+    <link href="css/641styles.css" rel="stylesheet">
+    <link href="css/961styles.css" rel="stylesheet">
+    <link href="css/1025styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <!-- JQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- <div class="wrapper"> -->
+      <header>
+        <div class="wrapper">
+        <a href="index.html"><img id="logo" class="logo-mobile-center" src="img/wordmark.png"></a>
+        <div class="desktop-nav">
+          <ul>
+            <li><a href="whats-fresh.html">What's Fresh</a></li>
+            <li><a href="about-market.html">About the Market</a></li>
+            <li><a href="about-lititz.html">About Lititz</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-nav">
+          <div class="menu-btn" id="menu-btn">
+            <div></div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="responsive-menu">
+            <ul>
+              <li><a href="whats-fresh.html">What's Fresh</a></li>
+              <li><a href="about-market.html">About the Market</a></li>
+              <li><a href="about-lititz.html">About Lititz</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </header>
+      <div class="shadow-container">
+        <div class="wrapper">
+          <div id="lititz-content">
+            <div id="lititz-map">
+              <img id="market-hero" src="img/market.jpg"/>
+            </div>
+            <div id="lititz-content-description">
+              <h2 class="cushycms">Voted best farmers market of 2011-</h2>
+              <p class="cushycms">The market is open air seasonal market located on North Water Street 1/2 block off of East Main Street in downtown Lititz. Featuring a full variety of locally produced products sold by the farmers in a festive setting.</p>
+            </div>
+          </div>
+          <div id="lititz-sub-content">
+            <div id="market-sub-content-1">
+              <h3 class="cushycms">More about the market:</h3>
+              <p class="cushycms">Live music, children&#39;s activities, chef demonstrations and a community interest table make the Lititz Farmers Market a family friendly way to spend a Saturday morning. The farmers bring fresh vegetables, fruits, baked goods, dairy, meats, eggs, jellies, flowers, plants and much more. Shoppers can leave the market with everything needed for a special Saturday night dinner or just a week of delicious food.</p>
+            </div>
+            <div id="sub-content-2" class="cushycms"><img src="img/hero-3.jpg" /></div>
+          </div>
+        </div>
+      </div>
+
+        <footer>
+          <div class="wrapper">
+            <div class="section mobile-center"><!-- Social -->
+              <!-- <h3>Vendor Information</h3>
+              <ul>
+                <li><a href="#">Vendor Link 1</a></li>
+                <li><a href="#">Vendor Link 2</a></li>
+                <li><a href="#">Vendor Link 3</a></li>
+              </ul> -->
+            </div>
+            <div class="section center"><!-- Become a Vender -->
+              <h3>Social</h3>
+              <a href="https://www.facebook.com/lititzfarmermarket" target="_blank"><img src="img/facebook.png"></a>
+              <a href="https://twitter.com/LTZmarket" target="_blank"><img src="img/twitter.png"></a>
+              <a href="https://www.instagram.com/lititzfarmersmarket/" target="_blank"><img src="img/instagram.png"></a>
+            </div>
+            <br>
+            <p class="copyright center">&copy; Lititz Farmer's Market 2016</p>
+            <br><br>
+          </div>
+        </div>
+      </footer>
+
+    <script type="text/javascript">
+     jQuery(function($){
+        	     $( '.menu-btn' ).click(function(){
+        	     $('.responsive-menu').slideToggle();
+        	     })
+            })
+    </script>
+
+    <script type="text/javascript">
+     jQuery(function($){
+        	     $( '#vendor1' ).click(function(){
+        	     $('#vendor1-description').slideToggle();
+        	     })
+            })
+    </script>
+
+  </body>
+  </html>

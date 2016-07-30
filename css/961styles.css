@@ -1,0 +1,179 @@
+@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .hero-img-main{
+    width:66%;
+    float:left;
+    display:block;
+  }
+
+  .hero-img-sub{
+    width:33%;
+    float:left;
+    margin-bottom:0;
+    display:block;
+  }
+
+  .hero-area{
+    width:101.1%;
+    display:inline-block;
+  }
+
+  header{
+    margin-bottom:20px;
+    box-shadow:0px 0px 10px 2px #a0d6d1;
+  }
+
+#fresh-content{
+  width:60%;
+  float:left;
+  border-right:4px solid #18b0bc;
+}
+
+#fresh-content img{
+  float:right;
+  padding:5px;
+  max-height:250px;
+  margin-left:40px;
+  border:1px solid grey;
+}
+
+#fresh-side-sections{
+  padding-left:20px;
+  float:left;
+  width:28.7%;
+}
+
+#featured-vendors{
+  margin-bottom:20px;
+
+}
+
+  .content-container{
+    width:100%;
+    display:inline-block;
+  }
+
+
+
+  #logo{
+    width:300px;
+  }
+
+  .desktop-nav{
+    display:block;
+    visibility: visible;
+    float:left;
+    margin-top:65px;
+    vertical-align: middle;
+    font-size:15pt;
+    clear:bottom;
+  }
+
+  .desktop-nav li{
+    display:inline;
+    margin-left:70px;
+  }
+
+  .wrapper-location{
+    height:340px;
+  }
+
+  .shadow-container{
+    box-shadow:0px 0px 25px 2px #a0d6d1;
+    border: 1px solid #a9d3cf;
+    border-radius: 5px;
+    display:block;
+    max-width:1024px;
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
+    background-color:white;
+  }
+
+  footer{
+    margin-top:30px;
+    box-shadow:0px 0px 25px 1px #a0d6d1;
+  }
+
+  .vendor-container{
+    margin-top:-2px;
+  }
+  #location .section{
+    float:left;
+    display:block;
+    width:49%;
+    /*border:1px solid red;*/
+  }
+
+  #visit{
+    width:80%;
+    margin-top:30px;
+    text-align:left;
+  }
+  #lititz-content{
+    background-color:white;
+  }
+
+  #sub-content-1 img{
+    max-width: 40%;
+  }
+
+  #lititz-content-description{
+    width:auto;
+    float:right;
+    padding:50px;
+    background-color:white;
+  }
+
+  #lititz-content-description p{
+    text-align:left;
+  }
+
+  #lititz-sub-content{
+    display:inline-block;
+    width:100%;
+    padding:0;
+  }
+
+  #sub-content-1{
+    float:left;
+    width:auto;
+    padding:50px;
+    padding-right:80px;
+    padding-left:50px;
+    padding-bottom:10px;
+  }
+#sub-content-1{
+  text-align:left;
+
+}
+
+#sub-content-1 .button{
+  display:block;
+  margin-left:0;
+  padding-left:30px;
+  padding-right:30px;
+  width:60%;
+  margin-bottom:none;
+}
+
+#market-sub-content-1{
+  float:left;
+  width:44%;
+  padding:30px;
+  margin:0;
+}
+
+  #sub-content-1 li{
+    margin-top:10px;
+  }
+  #sub-content-2{
+    float:right;
+    max-width:49%;
+    max-height:300px;
+    padding:0;
+  }
+  #sub-content-2 img{
+    width:110%;
+
+  }
+}

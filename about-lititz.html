@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Lititz Farmer's Market</title>
+    <!-- CSS Styles -->
+     <link rel="icon" href="favicon.png" type="image/x-icon">
+<link href="css/styles.css" rel="stylesheet">
+    <link href="css/320styles.css" rel="stylesheet">
+    <link href="css/641styles.css" rel="stylesheet">
+    <link href="css/961styles.css" rel="stylesheet">
+    <link href="css/1025styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <!-- JQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- <div class="wrapper"> -->
+      <header>
+        <div class="wrapper">
+        <a href="index.html"><img id="logo" class="logo-mobile-center" src="img/wordmark.png"></a>
+        <div class="desktop-nav">
+          <ul>
+            <li><a href="whats-fresh.html">What's Fresh</a></li>
+            <li><a href="about-market.html">About the Market</a></li>
+            <li><a href="about-lititz.html">About Lititz</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-nav">
+          <div class="menu-btn" id="menu-btn">
+            <div></div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="responsive-menu">
+            <ul>
+              <li><a href="whats-fresh.html">What's Fresh</a></li>
+              <li><a href="about-market.html">About the Market</a></li>
+              <li><a href="about-lititz.html">About Lititz</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </header>
+      <div class="shadow-container">
+        <div class="wrapper">
+          <div id="lititz-content">
+            <div id="lititz-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24396.258040126017!2d-76.32109814197234!3d40.1527016813707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c61866199fc9bf%3A0x149a1a2dc038e7ec!2sLititz%2C+PA+17543!5e0!3m2!1sen!2sus!4v1466912122590" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div id="lititz-content-description">
+              <h2 class="cushycms">Lititz is a vibrant, bustling town</h2>
+              <p class="cushycms"> When you visit Lititz, prepare for a unique and unforgettable experience. Our downtown attractions – and those just beyond our town limits – offer a wide variety of opportunities for fun, fascination and adventure!</p>
+            </div>
+          </div>
+          <div id="lititz-sub-content">
+            <div id="sub-content-1">
+              <h3 class="cushycms">Places to go after you visit the market:</h3>
+              <ul>
+                <li class="cushycms"><a href="http://www.wilburbuds.com/" target="_blank">Wilbur Chocolate Factory</a></li>
+                <li class="cushycms"><a href="http://www.lititzspringspark.org/" target="_blank">Lititz Springs Park</a></li>
+                <li class="cushycms"><a href="http://www.lititzhistoricalfoundation.com/" target="_blank">Lititz Historical Foundation and Museum</a></li>
+                <li class="cushycms"><a href="http://www.juliussturgis.com/" target="_blank">Julius Sturgis Pretzel Factory</a></li>
+                <li class="cushycms"><a href="http://www.lititzspringspark.org/" target="_blank">Lititz Train Station</a></li>
+              </ul>
+                <a href="http://www.lititzpa.com/" target="_blank" class="button animate">Learn More Here</a>
+            </div>
+            <div id="sub-content-2" class="cushycms">
+              <img src="img/ice-cream.jpg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <footer>
+          <div class="wrapper">
+            <div class="section mobile-center"><!-- Social -->
+              <!-- <h3>Vendor Information</h3>
+              <ul>
+                <li><a href="#">Vendor Link 1</a></li>
+                <li><a href="#">Vendor Link 2</a></li>
+                <li><a href="#">Vendor Link 3</a></li>
+              </ul> -->
+            </div>
+            <div class="section center"><!-- Become a Vender -->
+              <h3>Social</h3>
+              <a href="https://www.facebook.com/lititzfarmermarket" target="_blank"><img src="img/facebook.png"></a>
+              <a href="https://twitter.com/LTZmarket" target="_blank"><img src="img/twitter.png"></a>
+              <a href="https://www.instagram.com/lititzfarmersmarket/" target="_blank"><img src="img/instagram.png"></a>
+            </div>
+            <br>
+            <p class="copyright center">&copy; Lititz Farmer's Market 2016</p>
+            <br><br>
+          </div>
+        </div>
+      </footer>
+
+    <script type="text/javascript">
+     jQuery(function($){
+        	     $( '.menu-btn' ).click(function(){
+        	     $('.responsive-menu').slideToggle();
+        	     })
+            })
+    </script>
+
+    <script type="text/javascript">
+     jQuery(function($){
+        	     $( '#vendor1' ).click(function(){
+        	     $('#vendor1-description').slideToggle();
+        	     })
+            })
+    </script>
+
+  </body>
+  </html>

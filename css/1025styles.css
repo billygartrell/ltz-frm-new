@@ -1,0 +1,17 @@
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+
+  .wrapper{
+    max-width:1025px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0;
+  }
+
+    .content-area{
+      width:45%;
+      float:left;
+    }
+
+}

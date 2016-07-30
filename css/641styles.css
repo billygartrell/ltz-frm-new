@@ -1,0 +1,182 @@
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+header{
+    display:inline-block;
+  }
+
+.hero-img-sub{
+  width:50%;
+  float:left;
+  margin-bottom:30px;
+}
+
+.mobile-nav{
+  visibility: hidden;
+}
+
+.logo-mobile-center{
+  margin-left:30px;
+  margin-right:0;
+  display:block;
+}
+.mobile-hide{
+  display:none;
+}
+
+
+#logo {
+  float:left;
+width:200px;
+}
+
+.desktop-nav{
+  display:block;
+  visibility: visible;
+  float:left;
+  margin-top:45px;
+  vertical-align: middle;
+  font-size:12pt;
+  clear:bottom;
+}
+
+.desktop-nav li{
+  display:inline;
+  margin-left:30px;
+}
+
+
+.border-left{
+  border-left:1px solid grey;
+}
+
+.border-right{
+  border-right:1px solid grey;
+}
+
+.vendor-section li{
+  font-size:14pt;
+  margin-top:5px;
+  margin-left:40px;
+}
+
+.vendor-section{
+  width:32.33%;
+  display:inline-block;
+  margin-top:40px;
+
+}
+
+#logo{
+  width:200px;
+}
+
+#location .section{
+  float:left;
+  display:block;
+  width:49%;
+  /*border:1px solid red;*/
+}
+
+#location .map{
+  width:85%;
+  float:left;
+  display:block;
+  margin-top:30px;
+  margin-bottom:30px;
+  margin-right:70px;
+  height:270px;
+
+}
+
+#button{
+  width:75%;
+}
+
+#visit{
+  position:relative;
+  left:60px;
+  width:80%;
+  margin-top:30px;
+  text-align:left;
+}
+
+#visit p{
+text-align:left;
+}
+
+
+/* Footer Styles */
+
+footer{
+  font-size:11pt;
+  margin-top:0px;
+  text-align:left;
+  padding-top:0px;
+  margin-bottom:-20px;
+}
+
+footer h3{
+  font-size:12pt;
+}
+
+footer .mobile-center{
+  text-align:left;
+}
+
+footer .section{
+  float:left;
+  display:block;
+  width:29%;
+  padding:20px;
+}
+
+footer li{
+  margin-top:10px;
+}
+
+footer img{
+  width:50px;
+}
+
+/* End Footer Styles */
+
+#sub-content-1{
+  display:block;
+  margin-left:0;
+  margin-right:0;
+  margin-bottom:0px;
+  text-align:center;
+  width:100%;
+}
+
+#sub-content-1 .button{
+  display:block;
+  width:60%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:none;
+  float:none;
+}
+
+#market-hero{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+  overflow:hidden;
+}
+
+
+#sub-content-1 li{
+  margin-top:10px;
+}
+#sub-content-2{
+  width:100%
+
+}
+
+#sub-content-2 img{
+  height:100%;
+  margin:0px;
+}
+
+}
