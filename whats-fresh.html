@@ -29,17 +29,36 @@
   <body>
   <script>
   jQuery(function($){
-    // Grab the string containing the recipe title from the innerHTML of the <h2> tag
-    var recipe_title = $('#recipe-title')[0].innerHTML;
+      // Grab the string containing the recipe title from the innerHTML of the <h2> tag
+      var recipe_title = $('#recipe-title')[0].innerHTML;
 
-    // Grab twitter button <a> tag
-    var twitter_btn = $('#twitter-recipe')[0];
+      // Grab twitter button <a> tag
+      var twitter_btn = $('#twitter-recipe')[0];
 
-    // Grab the original text from the data-text attribute so we can append it (the page link)
-    var original_text = $(twitter_btn).attr('data-text');
+      // Strings that hold the surrounding text for the tweet
+      var checkout_text = "Check out this recipe from the Lititz Farmer's Market!";
+      var page_link = "http://lititzfarmersmarket.com/whats-fresh.html";
 
-    // Set the data-text attribute to contain the recipe title, a linebreak, and the original text (link)
-    $(twitter_btn).attr("data-text", recipe_title + "\n" + original_text); 
+      // Check the character count for the tweet by adding the length of each string
+      // Note: The link will be counted as 23 characters regardless of its actual length
+      // https://support.twitter.com/articles/78124
+      // Add 2 characters to account for linebreaks
+      var char_count = checkout_text.length +  recipe_title.length + 23 + 2;
+
+      if (char_count > 140) {
+        // Calculate the number of characters that are overflowing 
+        var chars_to_trunc = char_count - 140;
+
+        // Trim off those characters, plus 3 extra, to leave room for ellipses
+        // Slicing with a negative second argument will trim from the end of the string
+        recipe_title = recipe_title.slice(0, -chars_to_trunc + (-3));
+
+        // Concatenate the ellipses onto the recipe title
+        recipe_title += "...";
+      }
+      
+      // Set the data-text attribute to contain the 'Check out this!' text, the recipe title, and link
+      $(twitter_btn).attr("data-text", checkout_text + "\n" + recipe_title + "\n" + page_link); 
   })
   </script>
 <!--<div id="fb-root"></div>
@@ -108,7 +127,7 @@
               <p class="cushycms">July 23rd, 2016</p><br>
              <!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&appId=461478797255864&width=59&height=20" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>-->
   <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.lititzfarmersmarket.com%2Fwhats-fresh.html&layout=button&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-              <a href="https://twitter.com/share" id="twitter-recipe" class="twitter-share-button" data-text="http://lititzfarmersmarket.com/whats-fresh.html" data-show-count="false">Tweet</a><script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <a href="https://twitter.com/share" id="twitter-recipe" class="twitter-share-button" data-text="" data-show-count="false">Tweet</a><script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
               <p class="cushycms">A tartine is an open-faced sandwich. Manchego, a sheep&#39;s-milk cheese, and serrano ham give this tasty salad a Spanish flair.</p><br>
               <h3 class="cushycms">Ingredients</h3><br>
               <p class="cushycms">Tartines:<br />
